@@ -1,4 +1,4 @@
-# Plastics & male hormonal health: what the data can and can't say
+# Plastics & male hormonal health: What the data can and can't say
 
 A data visualization exploring how microplastics have increased over time, and whether microplastics suppress male-typical traits.
 
