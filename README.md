@@ -35,8 +35,7 @@ This repo renders that argument as a static website.
 
 ## Data integrity
 
-The point of this project is *not* to win an argument with a chart. Read
-[`SOURCES.md`](SOURCES.md) before reusing anything: it spells out which lines are
+Read [`SOURCES.md`](SOURCES.md) to distinguish which lines are
 real measurements, which are fitted model estimates, and which are placeholders
 for things that were never measured. Datasets retain their original licenses;
 cite the primary papers (NCD-RisC, Geyer et al., Levine et al., Travison et al.) and OECD.
