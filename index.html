@@ -96,7 +96,7 @@
   <div class="wrap reveal in">
     <div class="eyebrow">Data forensics · plastics &amp; the body</div>
     <h1>Does plastic exposure suppress male-typical traits?</h1>
-    <p class="lede">A viral hypothesis says rising microplastics are eroding male-typical traits. Here is what authoritative data actually shows — with every line labeled by how trustworthy it is. The honest verdict: <b>exposure rose steeply; a few androgen-sensitive markers drifted down in some populations but the cause is contested; male height rose then stalled; and the relevant endocrine science is about plasticizer chemicals, not the particles themselves.</b> Correlated lines are not proof.</p>
+    <p class="lede">A viral hypothesis says rising microplastics are eroding male-typical traits. Here is what authoritative data actually shows, with every line labeled by how trustworthy it is. The honest verdict: <b>microplastics exposure rose steeply; a few androgen-sensitive markers drifted down in some populations but the cause is contested; male height rose then stalled; and the relevant endocrine science is about plasticizer chemicals, not the particles themselves.</b> Please keep in mind that correlated lines are not concrete evidence of a relationship.</p>
 
     <div class="legend">
       <div class="cell">
@@ -116,16 +116,16 @@
 <!-- 1 -->
 <section>
   <div class="wrap reveal">
-    <div class="sec-head"><span class="sec-num">01</span><h2>The rise nobody disputes</h2><span class="badge measured">Measured</span></div>
-    <p class="sec-sub">Global plastic production grew roughly 230-fold in 70 years. This part of the story is on the firmest ground — it's a direct production record.</p>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Plastic production, 1950–2019</h2><span class="badge measured">Measured</span></div>
+    <p class="sec-sub">Global plastic production grew roughly 230-fold in 70 years.</p>
     <div class="card">
       <div class="card-top"><span class="card-title">Global plastic production, 1950–2019</span><span class="badge measured">Measured</span></div>
       <div class="chart-box"><canvas id="c1"></canvas></div>
-      <div class="src">Units: million tonnes / year. Source: Geyer et al. (2017), compiled by Our World in Data; 2019 from OECD Global Plastics Outlook (2022). <a href="https://ourworldindata.org/grapher/global-plastics-production" target="_blank" rel="noopener">ourworldindata.org</a> · Limitation: production ≠ human ingestion.</div>
+      <div class="src">Units: million tonnes / year. Sources: Geyer, Jambeck &amp; Law (2017), <em>Science Advances</em> 3:e1700782; 2019 value from OECD <em>Global Plastics Outlook</em> (2022). <a href="https://doi.org/10.1126/sciadv.1700782" target="_blank" rel="noopener">doi.org/10.1126/sciadv.1700782</a> · Limitation: production is not human ingestion.</div>
     </div>
     <div class="callout">
-      <h3>One caveat before the biology</h3>
-      <p>Production is not the same as what ends up <em>inside people</em>. There is no authoritative decade-by-decade series of human microplastic ingestion — the widely shared "~5 g per week" figure is a contested single estimate, not a trend.</p>
+      <h3>One caveat</h3>
+      <p>Production is not the same as the amount ingested by people, and there is no authoritative decade-by-decade series of human microplastic ingestion. Production figures therefore measure supply, not individual exposure.</p>
     </div>
   </div>
 </section>
@@ -133,8 +133,8 @@
 <!-- 2 -->
 <section>
   <div class="wrap reveal">
-    <div class="sec-head"><span class="sec-num">02</span><h2>The trait that should have fallen — but rose</h2><span class="badge measured">Measured</span></div>
-    <p class="sec-sub">Height is shaped by growth and androgen signalling. If plastics were broadly suppressing male-typical development, this is a place you might expect to see it. Instead, men got taller across the exact century plastics exploded — though the rise has since stalled in high-income countries.</p>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Is the relationship between microplastics and male height perfectly inverse? Not exactly</h2><span class="badge measured">Measured</span></div>
+    <p class="sec-sub">Height is shaped by growth and androgen signalling. If plastics were broadly suppressing male-typical development, this is a place you might expect to see it. Though developed economies like the Netherlands and the United States haven't seen a dip in mean adult male height, the average number has stalled since ~1960.</p>
     <div class="card">
       <div class="card-top"><span class="card-title">Mean adult male height by birth cohort, 1896–1996</span><span class="badge measured">Measured</span></div>
       <div class="chart-box"><canvas id="c2"></canvas></div>
@@ -142,24 +142,24 @@
     </div>
 
     <div class="callout">
-      <h3>The rise has stopped — though height isn't declining</h3>
-      <p>Note the flat right-hand end of both lines. In high-income countries the century-long climb has essentially halted: US male height has held near ~177 cm since the mid-20th-century birth cohorts, and the Dutch rise — long the steepest — has flattened near 182.5 cm. The key point is that height has <em>stopped growing</em>, not that it is falling. The plausible reason is mundane: once a population is well-fed and healthy, the nutrition and childhood-health gains that drove the climb are largely exhausted, so the curve levels off — not that a new suppressing force has appeared.</p>
-      <p style="color:var(--muted);font-size:14px">Source: NCD-RisC (2016) and subsequent high-income-country data via Our World in Data.</p>
+      <h3>Height has plateaued in high-income countries</h3>
+      <p>The increase has levelled off in high-income countries: US male height has held near 177 cm since the mid-20th-century birth cohorts, and Dutch height has flattened near 182.5 cm. Height has plateaued rather than declined. This pattern is consistent with the diminishing returns of nutrition and childhood-health improvements once a population is well-nourished.</p>
+      <p style="color:var(--muted);font-size:14px">Source: NCD Risk Factor Collaboration, eLife 2016 and Lancet 2020.</p>
     </div>
 
-    <p class="sec-sub" style="margin-top:34px">And here is the part that really breaks the hypothesis: the size of the change <em>tracks development</em>, not plastic exposure. The richest, highest-exposure countries have the tallest men; stagnation and decline cluster in the poorest, lowest-exposure ones.</p>
+    <p class="sec-sub" style="margin-top:34px">Height is influenced by many factors, predominantly childhood nutrition and disease, rather than androgen activity specifically. Using NCD-RisC's 2020 comparison of 19-year-olds (1985–2019), the change in height tracks development indicators rather than plastic exposure: the highest-income countries are tallest and have plateaued, several rapidly-developing countries rose, and many low-income countries changed little.</p>
     <div class="card">
-      <div class="card-top"><span class="card-title">Change in male height, 1896 → 1996 birth cohorts, by development tier</span><span class="badge measured">Measured</span></div>
+      <div class="card-top"><span class="card-title">Mean height of 19-year-old men, 1985 → 2019, by development level</span><span class="badge measured">Measured</span></div>
       <div class="chart-box" style="height:380px"><canvas id="c2b"></canvas></div>
-      <div class="src">Units: centimetres. Slope chart (the form NCD-RisC itself uses for cohort endpoints). Source: NCD-RisC, eLife 2016. <a href="https://elifesciences.org/articles/13410" target="_blank" rel="noopener">elifesciences.org</a> · Sourced anchors: Iran +16.5 cm (largest male gain worldwide); Netherlands 182.5 cm (tallest); several sub-Saharan countries fell ~5 cm from a ~1960s peak. Endpoint values are approximate reconstructions anchored to these reported figures — see SOURCES.md.</div>
+      <div class="src">Units: centimetres (19-year-olds). Source: NCD-RisC, <em>Lancet</em> 2020 (2,181 studies, 65M participants). <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31859-6/fulltext" target="_blank" rel="noopener">thelancet.com</a> · UK endpoints (176.4 → 178.2) are exact from the NCD-RisC country file; China gain (+8.0 cm) and Netherlands 2019 (183.8 cm) are sourced; the low-income line and China's 1985 value are anchored to those figures — see SOURCES.md.</div>
     </div>
 
     <div class="callout">
-      <h3>The development gradient</h3>
-      <p><b style="color:var(--height)">Highly-developed</b> — tallest, rising then plateauing: Netherlands 182.5 cm (1996), the tallest population on earth; Belgium, Estonia, Latvia, Denmark also &gt;181 cm. The US gained early, then plateaued and slid down the rankings.</p>
-      <p><b style="color:#2D6CDF">Rapidly-developing</b> — biggest gains via catch-up: Iranian men +16.5 cm over the century (the largest male increase anywhere); South Korea similar, as childhood nutrition improved.</p>
-      <p><b style="color:var(--testo)">Low-income / conflict-affected</b> — little change or decline: South Asia gained only ~5 cm; in parts of sub-Saharan Africa (Niger, Rwanda, Sierra Leone, Uganda) men's height <em>fell ~5 cm</em> from a 1960s peak. The shortest men (~160 cm) are in Timor-Leste, Yemen, Laos; the tallest-to-shortest gap has widened to 22–23 cm.</p>
-      <p style="color:var(--muted);font-size:14px">The driver is nutrition, disease, and early-life conditions — the same forces behind the global rise. Plastic/EDC exposure is <em>highest</em> exactly where men are tallest, the opposite of what an anti-androgenic mechanism predicts.</p>
+      <h3>The development gradient, 1985–2019</h3>
+      <p><b style="color:var(--height)">Highly-developed</b> — tallest, now plateaued: Dutch 19-year-old boys reached 183.8 cm in 2019, the highest national mean recorded. The UK rose by 1.8 cm (176.4 → 178.2) and moved from 28th to 39th in the global ranking; the US similarly changed little and moved down the ranking.</p>
+      <p><b style="color:#2D6CDF">Rapidly-developing</b> — the largest gains: Chinese 19-year-old boys rose about 8 cm in 35 years, moving from 150th to 65th in the ranking. South Korea and parts of Southeast Asia rose similarly over the period.</p>
+      <p><b style="color:var(--testo)">Low-income</b> — little change or decline: in many sub-Saharan African nations boys' height changed little or fell over these decades. The shortest national means in 2019 (~160 cm) were in Timor-Leste, Laos, the Solomon Islands, and Papua New Guinea, with a gap exceeding 20 cm between the tallest and shortest national means.</p>
+      <p style="color:var(--muted);font-size:14px">These differences track nutrition, disease, and early-life conditions rather than plastic exposure.</p>
     </div>
   </div>
 </section>
@@ -167,8 +167,8 @@
 <!-- 3 -->
 <section>
   <div class="wrap reveal">
-    <div class="sec-head"><span class="sec-num">03</span><h2>The contested markers</h2><span class="badge modeled">Modeled</span></div>
-    <p class="sec-sub">These are the trends that fuel the hypothesis. They are real findings — and genuinely debated. Both are <em>model lines fitted to data</em>, not raw annual measurements, and both are heavily confounded (lab methods, selection, obesity).</p>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Sperm concentration and testosterone</h2><span class="badge modeled">Modeled</span></div>
+    <p class="sec-sub">Sperm concentration and serum testosterone are direct measures of male reproductive and androgen function. Both show documented declines in some populations over recent decades. Both are debated and are confounded by laboratory methods, participant selection, and obesity. The lines shown are model fits (meta-regressions), not raw annual measurements.</p>
     <div class="split">
       <div class="card" style="margin:0">
         <div class="card-top"><span class="card-title">Sperm concentration</span><span class="badge modeled">Modeled</span></div>
@@ -187,8 +187,8 @@
 <!-- 4 -->
 <section>
   <div class="wrap reveal">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Overlaying them — and why that isn't proof</h2></div>
-    <p class="sec-sub">Here is the chart the hypothesis wants: exposure up, markers down. Each series is indexed to its own first year = 100. It looks suggestive. It cannot establish causation — and one major trait (height) moves the other way.</p>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Overlaying the series</h2></div>
+    <p class="sec-sub">Each series is indexed to its own first year (= 100). Series that move together or apart over time cannot, on their own, establish causation. The series shown also differ in data quality: plastic production is measured, while the sperm-concentration and testosterone lines are modeled.</p>
     <div class="card">
       <div class="card-top"><span class="card-title">Indexed trends: plastic vs. contested male markers</span><span><span class="badge measured">Measured</span> <span class="badge modeled">Modeled</span></span></div>
       <div class="chart-box" style="height:380px"><canvas id="c5"></canvas></div>
@@ -198,7 +198,7 @@
     <div class="split">
       <div class="box">
         <h3><span class="dot" style="background:var(--plastic)"></span>Particles vs. additives</h3>
-        <p>The androgen science is mostly about plasticizer <em>chemicals</em> — phthalates, BPA — which are anti-androgenic. That's different from microplastic <em>particles</em>, whose human hormonal effects are still mostly animal/in-vitro. The hypothesis conflates the two.</p>
+        <p>Most endocrine research relevant to this topic concerns plasticizer <em>chemicals</em> — phthalates and BPA — which have documented anti-androgenic effects. These are distinct from microplastic <em>particles</em>, whose effects on human hormones are studied mainly in animal and in-vitro models. The two are often treated as one.</p>
       </div>
       <div class="box">
         <h3><span class="dot" style="background:var(--verdict)"></span>Confounders everywhere</h3>
@@ -208,7 +208,7 @@
 
     <div class="callout">
       <h3>The premise isn't directly measurable</h3>
-      <p>There's no single quantity for how "male" a genome is expressed. What can be measured is androgen levels, sperm parameters, and androgen-dependent development (e.g. anogenital distance). Framing the question around those measurable outcomes is the only way to answer it honestly.</p>
+      <p>There is no single quantity for how "male" a genome is expressed. The measurable outcomes are androgen levels, sperm parameters, and androgen-dependent development (e.g. anogenital distance). These are the outcomes the research uses to study the question.</p>
     </div>
   </div>
 </section>
@@ -217,13 +217,13 @@
 <section style="border:none">
   <div class="wrap reveal">
     <div class="verdict">
-      <div class="eyebrow" style="color:#f4a3c4">The honest verdict</div>
-      <h2>Association under active debate — not a demonstrated effect on male-typical biology.</h2>
-      <p>Plastic exposure has risen steeply and undeniably. Some androgen-sensitive markers have drifted down in specific populations, which is a legitimate research concern centered on endocrine-disrupting <em>additives</em>. But the evidence is contested and confounded, a key male-typical trait runs the opposite way, and time-series overlap can't prove cause. Treat this as hypothesis-generating.</p>
+      <div class="eyebrow" style="color:#f4a3c4">Summary</div>
+      <h2>A documented association that remains scientifically contested; causation is not established.</h2>
+      <p>Plastic and plasticizer production rose roughly 230-fold between 1950 and 2019. Sperm concentration and serum testosterone show documented declines in some populations over recent decades; these findings are debated and are confounded by laboratory methods, participant selection, and obesity. Mean male height rose over the twentieth century and has plateaued in high-income countries; height is influenced by many factors, predominantly nutrition and disease, and is not a specific measure of androgen activity. A time-series overlap of these series cannot establish causation, and no causal relationship between microplastic exposure and these markers has been established.</p>
       <ul>
-        <li><b class="v-up">Up</b><span>Plastic production &amp; plasticizer exposure — measured, steep, uncontested.</span></li>
-        <li><b class="v-down">Down*</b><span>Sperm count &amp; testosterone in some cohorts — real but modeled, confounded, debated.</span></li>
-        <li><b class="v-flat">Risen, now flat</b><span>Male height — measured; rose over the century, now stalled (stopped growing, not declining) in high-income countries; cuts against a simple suppression story.</span></li>
+        <li><b class="v-up">Risen</b><span>Plastic production and plasticizer exposure — measured; rose roughly 230-fold, 1950–2019.</span></li>
+        <li><b class="v-down">Declined</b><span>Sperm concentration and testosterone — modeled trends; documented declines in some populations; debated and confounded.</span></li>
+        <li><b class="v-flat">Plateaued</b><span>Male height — measured; rose over the century and plateaued in high-income countries; influenced predominantly by nutrition and disease.</span></li>
       </ul>
     </div>
   </div>
@@ -233,7 +233,7 @@
 
 <footer>
   <div class="wrap">
-    Full provenance, links, periods and limitations for every series: see <a href="SOURCES.md">SOURCES.md</a>. Data retains original licenses (OWID: CC-BY). Built as a source-first analysis — correlation is not causation.
+    Full provenance, links, periods and limitations for every series: see <a href="SOURCES.md">SOURCES.md</a>. Data retains its original licenses; cite the primary papers. Correlation does not establish causation.
   </div>
 </footer>
 
@@ -271,24 +271,22 @@ new Chart(document.getElementById('c2'),{
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:12,boxHeight:12,color:ink}},tooltip:tip},scales:{...baseScales('Mean male height (cm)','Birth year'),y:{title:{display:true,text:'Mean male height (cm)',color:muted},grid:{color:hair},ticks:{color:muted},min:160,max:188}}}
 });
 
-// 2b — slope chart by development tier (1896 -> 1996)
+// 2b — slope chart by development level (1985 -> 2019, 19-year-olds, NCD-RisC Lancet 2020)
 const slope=(name,a,b,color,dash)=>({label:name,data:[a,b],borderColor:color,backgroundColor:color,borderWidth:2.5,borderDash:dash||[],tension:0,pointRadius:4,pointHoverRadius:6});
 new Chart(document.getElementById('c2b'),{
   type:'line',
-  data:{labels:['1896 cohort','1996 cohort'],
+  data:{labels:['1985','2019'],
     datasets:[
-      slope('Netherlands (developed)',169.5,182.5,HEIGHT),
-      slope('United States (developed, plateau)',170,177,HEIGHT2,[5,4]),
-      slope('Iran (rapid developer, +16.5)',157,173.5,'#2D6CDF'),
-      slope('South Korea (rapid developer)',160,175,'#6F9BE8',[5,4]),
-      slope('India (South Asia, small gain)',162,167,TESTO),
-      slope('Sierra Leone (decline from 1960s peak)',167,163,'#94A2AE',[2,3])
+      slope('Netherlands (developed, tallest)',182.7,183.8,HEIGHT),
+      slope('United Kingdom (developed, plateau)',176.4,178.2,HEIGHT2,[5,4]),
+      slope('China (rapid developer, +8 cm)',167.7,175.7,'#2D6CDF'),
+      slope('Low-income e.g. Timor-Leste, Laos',159.5,160.5,'#94A2AE',[2,3])
     ]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:12,boxHeight:12,color:ink,font:{size:10.5},padding:10}},
       tooltip:{...tip,callbacks:{label:(c)=>c.dataset.label.split(' (')[0]+': '+c.parsed.y+' cm'}}},
     scales:{x:{grid:{color:hair},ticks:{color:ink,font:{family:"'IBM Plex Mono'",size:12}}},
-      y:{title:{display:true,text:'Mean male height (cm)',color:muted},grid:{color:hair},ticks:{color:muted},min:150,max:190}}}
+      y:{title:{display:true,text:'Mean height, 19-year-olds (cm)',color:muted},grid:{color:hair},ticks:{color:muted},min:150,max:190}}}
 });
 
 // 3 — sperm

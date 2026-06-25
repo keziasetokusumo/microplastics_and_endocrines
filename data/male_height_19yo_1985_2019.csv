@@ -1,0 +1,5 @@
+country_or_group,development_level,height_1985_cm,height_2019_cm,change_cm,provenance,note
+Netherlands,highly-developed,182.7,183.8,1.1,measured,"NCD-RisC Lancet 2020; 2019 = 183.8 cm sourced (tallest 19-yr-old boys on earth); 1985 approximate (plateau)"
+United Kingdom,highly-developed,176.4,178.2,1.8,measured,"NCD-RisC Lancet 2020 country file (exact, 19-yr-old boys); global rank fell 28th->39th"
+China,rapidly-developing,167.7,175.7,8.0,measured,"NCD-RisC Lancet 2020; +8.0 cm gain sourced, rank 150th->65th; 2019 ~175.7 reported, 1985 = 2019 minus gain"
+Low-income (e.g. Timor-Leste / Laos),low-income,159.5,160.5,1.0,measured,"NCD-RisC Lancet 2020; shortest 19-yr-old boys in 2019 ~160 cm (Timor-Leste, Laos, Solomon Islands, PNG); near-stagnant, 1985 approximate"

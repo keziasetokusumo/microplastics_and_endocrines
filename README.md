@@ -25,7 +25,7 @@ data series tagged **measured**, **modeled**, or **unmeasurable**.
 ├── data/             # the underlying CSVs, each row tagged with provenance
 │   ├── plastic_production.csv
 │   ├── male_height_ncdrisc.csv
-│   ├── male_height_by_development.csv
+│   ├── male_height_19yo_1985_2019.csv
 │   ├── sperm_count_levine.csv
 │   └── testosterone_trend.csv
 ├── LICENSE
@@ -52,8 +52,8 @@ Pages folder — handy if you later add a build step.)
 The point of this project is *not* to win an argument with a chart. Read
 [`SOURCES.md`](SOURCES.md) before reusing anything: it spells out which lines are
 real measurements, which are fitted model estimates, and which are placeholders
-for things that were never measured. Datasets retain their original licenses
-(Our World in Data is CC-BY; cite the underlying papers).
+for things that were never measured. Datasets retain their original licenses;
+cite the primary papers (NCD-RisC, Geyer et al., Levine et al., Travison et al.) and OECD.
 
 ## License
 
