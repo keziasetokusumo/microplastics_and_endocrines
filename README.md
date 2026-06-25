@@ -10,8 +10,7 @@ and the relevant endocrine science is mostly about plasticizer *additives*
 (phthalates, BPA), not microplastic particles. Correlated time series cannot
 establish causation.**
 
-This repo renders that argument as a static website (`index.html`) with every
-data series tagged **measured**, **modeled**, or **unmeasurable**.
+This repo renders that argument as a static website.
 
 ## What's here
 
