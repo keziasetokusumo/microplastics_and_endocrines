@@ -16,7 +16,9 @@ This repo renders that argument as a static website.
 ## View it
 Click [`here`](https://keziasetokusumo.github.io/microplastics_and_endocrines/) to explore the data visually.
 
-<img width="681" height="681" alt="Screenshot 2026-06-25 at 5 32 13 PM" src="https://github.com/user-attachments/assets/7d26a59f-2e8e-4daf-867b-e7328774a932" />
+<img width="911" height="634" alt="Screenshot 2026-06-25 at 5 35 09 PM" src="https://github.com/user-attachments/assets/e5817bbc-4fff-47ab-b0b5-cff2cf323498" />
+
+<img width="910" height="697" alt="Screenshot 2026-06-25 at 5 35 19 PM" src="https://github.com/user-attachments/assets/65cad9d9-ecbe-464f-9546-ffd32ce6f39b" />
 
 ## What's here
 
