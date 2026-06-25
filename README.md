@@ -1,9 +1,6 @@
 # Plastics & male hormonal health: what the data can and can't say
 
-An honest, source-first look at a viral question:
-
-> *"How has microplastic/plastic exposure increased over time, and does it
-> suppress male-typical traits?"*
+A data visualization exploring how microplastics have increased over time, and whether microplastics suppress male-typical traits.
 
 The short answer the data supports: **plastic exposure has risen dramatically;
 some androgen-sensitive markers (sperm count, testosterone) show declines in
