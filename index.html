@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plastics &amp; male hormonal health — what the data can and can't say</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#E8ECEF; --surface:#FFFFFF; --ink:#15212B; --muted:#566370;
+    --hair:#CBD5DC; --hair2:#DCE3E8;
+    --plastic:#9B1D9B; --height:#0E7C66; --sperm:#C24B3A; --testo:#CC7A14;
+    --ghost:#94A2AE; --verdict:#B23A2E;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--hair2) 1px,transparent 1px),linear-gradient(90deg,var(--hair2) 1px,transparent 1px);
+    background-size:32px 32px;background-position:-1px -1px;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  /* ---- header ---- */
+  header{padding:72px 0 40px;border-bottom:2px solid var(--ink)}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--plastic);font-weight:600;margin-bottom:22px}
+  h1{font-family:var(--mono);font-weight:600;font-size:clamp(28px,5vw,46px);line-height:1.12;letter-spacing:-.01em;margin:0 0 24px;max-width:18ch}
+  .lede{font-size:clamp(16px,2.2vw,19px);max-width:62ch;color:var(--ink)}
+  .lede b{color:var(--verdict);font-weight:600}
+  /* ---- provenance legend (signature) ---- */
+  .legend{margin:34px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .legend .cell{background:var(--surface);border:1px solid var(--hair);padding:14px 16px}
+  .legend h4{font-family:var(--mono);font-size:12px;letter-spacing:.06em;margin:0 0 6px;text-transform:uppercase}
+  .legend p{margin:0;font-size:13px;color:var(--muted)}
+  .badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+  .badge::before{content:"";width:8px;height:8px;border-radius:50%}
+  .badge.measured{background:var(--ink);color:#fff}
+  .badge.measured::before{background:#6fd3a8}
+  .badge.modeled{background:transparent;color:#9a5b06;border:1px dashed var(--testo)}
+  .badge.modeled::before{background:var(--testo)}
+  /* ---- sections ---- */
+  section{padding:56px 0;border-bottom:1px solid var(--hair)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);font-size:13px;color:var(--muted);font-weight:600}
+  h2{font-family:var(--mono);font-weight:600;font-size:clamp(20px,3vw,27px);margin:0;letter-spacing:-.01em}
+  .sec-sub{font-size:16px;color:var(--muted);max-width:64ch;margin:14px 0 0}
+  .card{background:var(--surface);border:1px solid var(--hair);margin-top:26px}
+  .card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--hair2);flex-wrap:wrap}
+  .card-title{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.02em}
+  .chart-box{position:relative;height:340px;padding:18px}
+  .src{font-family:var(--mono);font-size:11px;color:var(--muted);padding:0 18px 14px;line-height:1.5}
+  .src a{color:var(--plastic);text-decoration:none;border-bottom:1px solid transparent}
+  .src a:hover{border-bottom-color:var(--plastic)}
+  /* ---- callout ---- */
+  .callout{margin-top:26px;border-left:3px solid var(--plastic);background:var(--surface);padding:20px 22px;border:1px solid var(--hair);border-left:3px solid var(--plastic)}
+  .callout h3{font-family:var(--mono);font-size:14px;margin:0 0 10px;letter-spacing:.02em}
+  .callout p{margin:0 0 10px;font-size:15px}
+  .callout p:last-child{margin-bottom:0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .split .box{background:var(--surface);border:1px solid var(--hair);padding:18px 20px}
+  .split .box h3{font-family:var(--mono);font-size:13px;letter-spacing:.04em;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .split .box p{margin:0;font-size:14.5px;color:var(--ink)}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 auto}
+  /* ---- verdict ---- */
+  .verdict{background:var(--ink);color:#EDF1F3;padding:40px 34px;margin-top:26px}
+  .verdict .eyebrow{color:#f0a;color:#f4a3c4}
+  .verdict h2{color:#fff;margin-bottom:18px}
+  .verdict p{font-size:16px;color:#C7D0D6;max-width:66ch}
+  .verdict ul{margin:18px 0 0;padding:0;list-style:none}
+  .verdict li{padding:12px 0;border-top:1px solid #2a3a47;display:flex;gap:14px;align-items:flex-start;font-size:15px}
+  .verdict li b{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:2px;white-space:nowrap;flex:0 0 auto;margin-top:2px}
+  .v-up{background:#3a2a3f;color:#e3a7d6}
+  .v-down{background:#3a2f22;color:#e6b878}
+  .v-flat{background:#22332b;color:#7fd3a8}
+  footer{padding:48px 0 80px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  footer a{color:var(--plastic);text-decoration:none}
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:680px){
+    .legend{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr}
+    .chart-box{height:300px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap reveal in">
+    <div class="eyebrow">Data forensics · plastics &amp; the body</div>
+    <h1>Does plastic exposure suppress male-typical traits?</h1>
+    <p class="lede">A viral hypothesis says rising microplastics are eroding male-typical traits. Here is what authoritative data actually shows — with every line labeled by how trustworthy it is. The honest verdict: <b>exposure rose steeply; a few androgen-sensitive markers drifted down in some populations but the cause is contested; male height rose then stalled; and the relevant endocrine science is about plasticizer chemicals, not the particles themselves.</b> Correlated lines are not proof.</p>
+
+    <div class="legend">
+      <div class="cell">
+        <h4><span class="badge measured">Measured</span></h4>
+        <p>Direct population measurements compiled by an authoritative body.</p>
+      </div>
+      <div class="cell">
+        <h4><span class="badge modeled">Modeled</span></h4>
+        <p>A trend line fitted to data — an estimate, not raw annual observations.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 -->
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The rise nobody disputes</h2><span class="badge measured">Measured</span></div>
+    <p class="sec-sub">Global plastic production grew roughly 230-fold in 70 years. This part of the story is on the firmest ground — it's a direct production record.</p>
+    <div class="card">
+      <div class="card-top"><span class="card-title">Global plastic production, 1950–2019</span><span class="badge measured">Measured</span></div>
+      <div class="chart-box"><canvas id="c1"></canvas></div>
+      <div class="src">Units: million tonnes / year. Source: Geyer et al. (2017), compiled by Our World in Data; 2019 from OECD Global Plastics Outlook (2022). <a href="https://ourworldindata.org/grapher/global-plastics-production" target="_blank" rel="noopener">ourworldindata.org</a> · Limitation: production ≠ human ingestion.</div>
+    </div>
+    <div class="callout">
+      <h3>One caveat before the biology</h3>
+      <p>Production is not the same as what ends up <em>inside people</em>. There is no authoritative decade-by-decade series of human microplastic ingestion — the widely shared "~5 g per week" figure is a contested single estimate, not a trend.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The trait that should have fallen — but rose</h2><span class="badge measured">Measured</span></div>
+    <p class="sec-sub">Height is shaped by growth and androgen signalling. If plastics were broadly suppressing male-typical development, this is a place you might expect to see it. Instead, men got taller across the exact century plastics exploded — though the rise has since stalled in high-income countries.</p>
+    <div class="card">
+      <div class="card-top"><span class="card-title">Mean adult male height by birth cohort, 1896–1996</span><span class="badge measured">Measured</span></div>
+      <div class="chart-box"><canvas id="c2"></canvas></div>
+      <div class="src">Units: centimetres. Source: NCD Risk Factor Collaboration, eLife 2016 (1,472 studies, &gt;18.6M people). <a href="https://elifesciences.org/articles/13410" target="_blank" rel="noopener">elifesciences.org</a> · Limitation: selected countries; intermediate cohort points approximate — see SOURCES.md.</div>
+    </div>
+
+    <div class="callout">
+      <h3>The rise has stopped — though height isn't declining</h3>
+      <p>Note the flat right-hand end of both lines. In high-income countries the century-long climb has essentially halted: US male height has held near ~177 cm since the mid-20th-century birth cohorts, and the Dutch rise — long the steepest — has flattened near 182.5 cm. The key point is that height has <em>stopped growing</em>, not that it is falling. The plausible reason is mundane: once a population is well-fed and healthy, the nutrition and childhood-health gains that drove the climb are largely exhausted, so the curve levels off — not that a new suppressing force has appeared.</p>
+      <p style="color:var(--muted);font-size:14px">Source: NCD-RisC (2016) and subsequent high-income-country data via Our World in Data.</p>
+    </div>
+
+    <p class="sec-sub" style="margin-top:34px">And here is the part that really breaks the hypothesis: the size of the change <em>tracks development</em>, not plastic exposure. The richest, highest-exposure countries have the tallest men; stagnation and decline cluster in the poorest, lowest-exposure ones.</p>
+    <div class="card">
+      <div class="card-top"><span class="card-title">Change in male height, 1896 → 1996 birth cohorts, by development tier</span><span class="badge measured">Measured</span></div>
+      <div class="chart-box" style="height:380px"><canvas id="c2b"></canvas></div>
+      <div class="src">Units: centimetres. Slope chart (the form NCD-RisC itself uses for cohort endpoints). Source: NCD-RisC, eLife 2016. <a href="https://elifesciences.org/articles/13410" target="_blank" rel="noopener">elifesciences.org</a> · Sourced anchors: Iran +16.5 cm (largest male gain worldwide); Netherlands 182.5 cm (tallest); several sub-Saharan countries fell ~5 cm from a ~1960s peak. Endpoint values are approximate reconstructions anchored to these reported figures — see SOURCES.md.</div>
+    </div>
+
+    <div class="callout">
+      <h3>The development gradient</h3>
+      <p><b style="color:var(--height)">Highly-developed</b> — tallest, rising then plateauing: Netherlands 182.5 cm (1996), the tallest population on earth; Belgium, Estonia, Latvia, Denmark also &gt;181 cm. The US gained early, then plateaued and slid down the rankings.</p>
+      <p><b style="color:#2D6CDF">Rapidly-developing</b> — biggest gains via catch-up: Iranian men +16.5 cm over the century (the largest male increase anywhere); South Korea similar, as childhood nutrition improved.</p>
+      <p><b style="color:var(--testo)">Low-income / conflict-affected</b> — little change or decline: South Asia gained only ~5 cm; in parts of sub-Saharan Africa (Niger, Rwanda, Sierra Leone, Uganda) men's height <em>fell ~5 cm</em> from a 1960s peak. The shortest men (~160 cm) are in Timor-Leste, Yemen, Laos; the tallest-to-shortest gap has widened to 22–23 cm.</p>
+      <p style="color:var(--muted);font-size:14px">The driver is nutrition, disease, and early-life conditions — the same forces behind the global rise. Plastic/EDC exposure is <em>highest</em> exactly where men are tallest, the opposite of what an anti-androgenic mechanism predicts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2>The contested markers</h2><span class="badge modeled">Modeled</span></div>
+    <p class="sec-sub">These are the trends that fuel the hypothesis. They are real findings — and genuinely debated. Both are <em>model lines fitted to data</em>, not raw annual measurements, and both are heavily confounded (lab methods, selection, obesity).</p>
+    <div class="split">
+      <div class="card" style="margin:0">
+        <div class="card-top"><span class="card-title">Sperm concentration</span><span class="badge modeled">Modeled</span></div>
+        <div class="chart-box" style="height:300px"><canvas id="c3"></canvas></div>
+        <div class="src">Million/mL, Western men. Meta-regression: Levine et al. (2017), ~52% decline. <a href="https://doi.org/10.1093/humupd/dmx022" target="_blank" rel="noopener">doi.org</a></div>
+      </div>
+      <div class="card" style="margin:0">
+        <div class="card-top"><span class="card-title">Total testosterone (indexed)</span><span class="badge modeled">Modeled</span></div>
+        <div class="chart-box" style="height:300px"><canvas id="c4"></canvas></div>
+        <div class="src">Index, 1987 baseline = 100. Travison et al. (2007), US cohort. <a href="https://doi.org/10.1210/jc.2006-1375" target="_blank" rel="noopener">doi.org</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Overlaying them — and why that isn't proof</h2></div>
+    <p class="sec-sub">Here is the chart the hypothesis wants: exposure up, markers down. Each series is indexed to its own first year = 100. It looks suggestive. It cannot establish causation — and one major trait (height) moves the other way.</p>
+    <div class="card">
+      <div class="card-top"><span class="card-title">Indexed trends: plastic vs. contested male markers</span><span><span class="badge measured">Measured</span> <span class="badge modeled">Modeled</span></span></div>
+      <div class="chart-box" style="height:380px"><canvas id="c5"></canvas></div>
+      <div class="src">Indexed (each series' first year = 100). Right axis: plastic. Left axis: biological markers. Sources as above; biological lines are modeled.</div>
+    </div>
+
+    <div class="split">
+      <div class="box">
+        <h3><span class="dot" style="background:var(--plastic)"></span>Particles vs. additives</h3>
+        <p>The androgen science is mostly about plasticizer <em>chemicals</em> — phthalates, BPA — which are anti-androgenic. That's different from microplastic <em>particles</em>, whose human hormonal effects are still mostly animal/in-vitro. The hypothesis conflates the two.</p>
+      </div>
+      <div class="box">
+        <h3><span class="dot" style="background:var(--verdict)"></span>Confounders everywhere</h3>
+        <p>Obesity, lab-method changes, selection bias, and geography all move these markers. Skeptical reviews argue the secular declines may be partly artefactual. The debate is live, not settled.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>The premise isn't directly measurable</h3>
+      <p>There's no single quantity for how "male" a genome is expressed. What can be measured is androgen levels, sperm parameters, and androgen-dependent development (e.g. anogenital distance). Framing the question around those measurable outcomes is the only way to answer it honestly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- verdict -->
+<section style="border:none">
+  <div class="wrap reveal">
+    <div class="verdict">
+      <div class="eyebrow" style="color:#f4a3c4">The honest verdict</div>
+      <h2>Association under active debate — not a demonstrated effect on male-typical biology.</h2>
+      <p>Plastic exposure has risen steeply and undeniably. Some androgen-sensitive markers have drifted down in specific populations, which is a legitimate research concern centered on endocrine-disrupting <em>additives</em>. But the evidence is contested and confounded, a key male-typical trait runs the opposite way, and time-series overlap can't prove cause. Treat this as hypothesis-generating.</p>
+      <ul>
+        <li><b class="v-up">Up</b><span>Plastic production &amp; plasticizer exposure — measured, steep, uncontested.</span></li>
+        <li><b class="v-down">Down*</b><span>Sperm count &amp; testosterone in some cohorts — real but modeled, confounded, debated.</span></li>
+        <li><b class="v-flat">Risen, now flat</b><span>Male height — measured; rose over the century, now stalled (stopped growing, not declining) in high-income countries; cuts against a simple suppression story.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Full provenance, links, periods and limitations for every series: see <a href="SOURCES.md">SOURCES.md</a>. Data retains original licenses (OWID: CC-BY). Built as a source-first analysis — correlation is not causation.
+  </div>
+</footer>
+
+<script>
+const ink="#15212B",muted="#566370",hair="rgba(203,213,220,.6)";
+const PLASTIC="#9B1D9B",HEIGHT="#0E7C66",HEIGHT2="#6BA292",SPERM="#C24B3A",TESTO="#CC7A14";
+Chart.defaults.font.family="'IBM Plex Mono', monospace";
+Chart.defaults.font.size=11;
+Chart.defaults.color=muted;
+
+const baseScales=(yTitle,xTitle)=>({
+  x:{title:{display:!!xTitle,text:xTitle,color:muted,font:{size:11}},grid:{color:hair},ticks:{color:muted}},
+  y:{title:{display:!!yTitle,text:yTitle,color:muted,font:{size:11}},grid:{color:hair},ticks:{color:muted},beginAtZero:true}
+});
+const noLegend={legend:{display:false}};
+const tip={backgroundColor:ink,titleFont:{family:"'IBM Plex Mono'"},bodyFont:{family:"'IBM Plex Mono'"},padding:10,cornerRadius:2,displayColors:true};
+
+// 1 — plastic production
+new Chart(document.getElementById('c1'),{
+  type:'line',
+  data:{labels:[1950,1960,1970,1980,1990,2000,2010,2015,2019],
+    datasets:[{label:'Mt/yr',data:[2,8,35,70,120,213,313,381,460],
+      borderColor:PLASTIC,backgroundColor:'rgba(155,29,155,.10)',fill:true,tension:.3,borderWidth:2.5,pointRadius:3,pointBackgroundColor:PLASTIC}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{...{legend:noLegend.legend},tooltip:tip},scales:baseScales('Million tonnes / year','Year')}
+});
+
+// 2 — height
+new Chart(document.getElementById('c2'),{
+  type:'line',
+  data:{labels:[1896,1920,1940,1960,1980,1996],
+    datasets:[
+      {label:'Netherlands',data:[169,173,178,181,182,182.5],borderColor:HEIGHT,backgroundColor:HEIGHT,tension:.3,borderWidth:2.5,pointRadius:3},
+      {label:'United States',data:[171,173,176,177,177,177],borderColor:HEIGHT2,backgroundColor:HEIGHT2,borderDash:[5,4],tension:.3,borderWidth:2,pointRadius:3}
+    ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:12,boxHeight:12,color:ink}},tooltip:tip},scales:{...baseScales('Mean male height (cm)','Birth year'),y:{title:{display:true,text:'Mean male height (cm)',color:muted},grid:{color:hair},ticks:{color:muted},min:160,max:188}}}
+});
+
+// 2b — slope chart by development tier (1896 -> 1996)
+const slope=(name,a,b,color,dash)=>({label:name,data:[a,b],borderColor:color,backgroundColor:color,borderWidth:2.5,borderDash:dash||[],tension:0,pointRadius:4,pointHoverRadius:6});
+new Chart(document.getElementById('c2b'),{
+  type:'line',
+  data:{labels:['1896 cohort','1996 cohort'],
+    datasets:[
+      slope('Netherlands (developed)',169.5,182.5,HEIGHT),
+      slope('United States (developed, plateau)',170,177,HEIGHT2,[5,4]),
+      slope('Iran (rapid developer, +16.5)',157,173.5,'#2D6CDF'),
+      slope('South Korea (rapid developer)',160,175,'#6F9BE8',[5,4]),
+      slope('India (South Asia, small gain)',162,167,TESTO),
+      slope('Sierra Leone (decline from 1960s peak)',167,163,'#94A2AE',[2,3])
+    ]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:12,boxHeight:12,color:ink,font:{size:10.5},padding:10}},
+      tooltip:{...tip,callbacks:{label:(c)=>c.dataset.label.split(' (')[0]+': '+c.parsed.y+' cm'}}},
+    scales:{x:{grid:{color:hair},ticks:{color:ink,font:{family:"'IBM Plex Mono'",size:12}}},
+      y:{title:{display:true,text:'Mean male height (cm)',color:muted},grid:{color:hair},ticks:{color:muted},min:150,max:190}}}
+});
+
+// 3 — sperm
+new Chart(document.getElementById('c3'),{
+  type:'line',
+  data:{labels:[1973,1985,1996,2011],
+    datasets:[{label:'million/mL',data:[99.0,78.0,62.0,47.1],borderColor:SPERM,backgroundColor:'rgba(194,75,58,.08)',fill:true,borderDash:[6,4],tension:.2,borderWidth:2.5,pointRadius:3,pointBackgroundColor:SPERM}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:noLegend.legend,tooltip:tip},scales:{...baseScales('Sperm conc. (million/mL)','Year'),y:{title:{display:true,text:'Sperm conc. (million/mL)',color:muted},grid:{color:hair},ticks:{color:muted},beginAtZero:true,max:110}}}
+});
+
+// 4 — testosterone
+new Chart(document.getElementById('c4'),{
+  type:'line',
+  data:{labels:[1988,1996,2003],
+    datasets:[{label:'index',data:[100,87,78],borderColor:TESTO,backgroundColor:'rgba(204,122,20,.08)',fill:true,borderDash:[6,4],tension:.2,borderWidth:2.5,pointRadius:3,pointBackgroundColor:TESTO}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:noLegend.legend,tooltip:tip},scales:{...baseScales('Testosterone (1987=100)','Year'),y:{title:{display:true,text:'Testosterone index (1987=100)',color:muted},grid:{color:hair},ticks:{color:muted},min:60,max:110}}}
+});
+
+// 5 — overlay (indexed, dual axis)
+new Chart(document.getElementById('c5'),{
+  type:'line',
+  data:{
+    datasets:[
+      {label:'Plastic production (right axis, index)',yAxisID:'yR',borderColor:PLASTIC,backgroundColor:PLASTIC,borderWidth:2.5,tension:.3,pointRadius:2,
+        data:[{x:1973,y:100},{x:1980,y:175},{x:1990,y:300},{x:2000,y:533},{x:2010,y:783},{x:2019,y:1150}]},
+      {label:'Sperm concentration (left, index)',yAxisID:'yL',borderColor:SPERM,backgroundColor:SPERM,borderDash:[6,4],borderWidth:2,tension:.2,pointRadius:2,
+        data:[{x:1973,y:100},{x:1985,y:79},{x:1996,y:63},{x:2011,y:48}]},
+      {label:'Testosterone (left, index)',yAxisID:'yL',borderColor:TESTO,backgroundColor:TESTO,borderDash:[6,4],borderWidth:2,tension:.2,pointRadius:2,
+        data:[{x:1988,y:100},{x:1996,y:87},{x:2003,y:78}]}
+    ]},
+  options:{responsive:true,maintainAspectRatio:false,parsing:false,
+    plugins:{legend:{display:true,labels:{boxWidth:12,boxHeight:12,color:ink,font:{size:10.5}}},tooltip:tip},
+    scales:{
+      x:{type:'linear',min:1970,max:2020,title:{display:true,text:'Year',color:muted},grid:{color:hair},ticks:{color:muted,stepSize:10}},
+      yL:{position:'left',min:0,max:120,title:{display:true,text:'Biological markers (index)',color:SPERM},grid:{color:hair},ticks:{color:muted}},
+      yR:{position:'right',min:0,max:1300,title:{display:true,text:'Plastic (index)',color:PLASTIC},grid:{drawOnChartArea:false},ticks:{color:muted}}
+    }}
+});
+
+// scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

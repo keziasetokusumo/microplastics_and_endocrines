@@ -1,0 +1,5 @@
+year,mean_sperm_concentration_million_per_mL,provenance,note
+1973,99.0,modeled,"Levine et al. (2017) meta-regression fitted endpoint, unselected Western men"
+1985,78.0,modeled,"Levine et al. (2017) meta-regression fitted (interpolated along reported slope)"
+1996,62.0,modeled,"Levine et al. (2017) meta-regression fitted (interpolated along reported slope)"
+2011,47.1,modeled,"Levine et al. (2017) meta-regression fitted endpoint; ~51.6% decline in concentration"

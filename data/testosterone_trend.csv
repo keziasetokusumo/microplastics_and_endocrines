@@ -1,0 +1,4 @@
+survey_period,year_midpoint,total_testosterone_index_1987baseline,provenance,note
+T1,1988,100,modeled,"Travison et al. (2007) Massachusetts Male Aging Study; indexed to baseline"
+T2,1996,87,modeled,"Travison et al. (2007); ~1.2%/yr age-independent population decline, indexed"
+T3,2003,78,modeled,"Travison et al. (2007); indexed. US-specific cohort, not global"

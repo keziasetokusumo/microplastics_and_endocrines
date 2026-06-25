@@ -1,0 +1,13 @@
+birth_year,country,mean_male_height_cm,provenance,note
+1896,United States,171,measured,"NCD-RisC (2016); endpoint reference value"
+1920,United States,173,measured,"NCD-RisC (2016); intermediate approximate"
+1940,United States,176,measured,"NCD-RisC (2016); intermediate approximate"
+1960,United States,177,measured,"NCD-RisC (2016); intermediate approximate"
+1980,United States,177,measured,"NCD-RisC (2016); plateau"
+1996,United States,177,measured,"NCD-RisC (2016); endpoint reference value"
+1896,Netherlands,169,measured,"NCD-RisC (2016); endpoint reference value"
+1920,Netherlands,173,measured,"NCD-RisC (2016); intermediate approximate"
+1940,Netherlands,178,measured,"NCD-RisC (2016); intermediate approximate"
+1960,Netherlands,181,measured,"NCD-RisC (2016); intermediate approximate"
+1980,Netherlands,182,measured,"NCD-RisC (2016); intermediate approximate"
+1996,Netherlands,182.5,measured,"NCD-RisC (2016); tallest national cohort recorded"

@@ -1,0 +1,7 @@
+country,development_tier,height_1896_cm,height_1996_cm,change_cm,provenance,note
+Netherlands,highly-developed,169.5,182.5,13.0,measured,"NCD-RisC 2016; 1996 value 182.5 cm is sourced (tallest on earth); 1896 approximate"
+United States,highly-developed,170.0,177.0,7.0,measured,"NCD-RisC 2016; early gainer then plateau; endpoints approximate"
+Iran,rapidly-developing,157.0,173.5,16.5,measured,"NCD-RisC 2016; +16.5 cm gain is sourced (largest male gain worldwide); absolute endpoints approximate to match gain"
+South Korea,rapidly-developing,160.0,175.0,15.0,measured,"NCD-RisC 2016; large catch-up gain; endpoints approximate"
+India,low-income-South-Asia,162.0,167.0,5.0,measured,"NCD-RisC 2016; 'little change' in South Asia; endpoints approximate"
+Sierra Leone,low-income-sub-Saharan,167.0,163.0,-4.0,measured,"NCD-RisC 2016; representative of ~5 cm decline from a 1960s peak (also Niger, Rwanda, Uganda); endpoints approximate"
