@@ -14,7 +14,7 @@ This repo renders that argument as a static website.
 
 
 ## View it
-Click [`https://keziasetokusumo.github.io/microplastics_and_endocrines/`](here) to explore the data visually.
+Click [`here`](https://keziasetokusumo.github.io/microplastics_and_endocrines/) to explore the data visually.
 
 <img width="681" height="681" alt="Screenshot 2026-06-25 at 5 32 13 PM" src="https://github.com/user-attachments/assets/7d26a59f-2e8e-4daf-867b-e7328774a932" />
 
