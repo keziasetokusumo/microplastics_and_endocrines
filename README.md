@@ -17,7 +17,7 @@ data series tagged **measured**, **modeled**, or **unmeasurable**.
 
 ```
 .
-├── data/             # the underlying CSVs, each row tagged with provenance
+├── data/             # the underlying CSVs
 │   ├── plastic_production.csv
 │   ├── male_height_ncdrisc.csv
 │   ├── male_height_19yo_1985_2019.csv
@@ -25,8 +25,8 @@ data series tagged **measured**, **modeled**, or **unmeasurable**.
 │   └── testosterone_trend.csv
 ├── LICENSE
 ├── README.md
-├── SOURCES.md        # full provenance: source, link, period, limitations per series
-└── index.html        # the site — open locally or serve via GitHub Pages
+├── SOURCES.md        # source, link, period, limitations per series
+└── index.html        # the data visualization
 
 ```
 
