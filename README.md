@@ -32,18 +32,7 @@ data series tagged **measured**, **modeled**, or **unmeasurable**.
 
 ## View it
 
-**Locally:** open `index.html` in any browser (it's self-contained; charts load
-Chart.js from a CDN at runtime).
 
-**On the web via GitHub Pages:**
-1. Push this repo to GitHub.
-2. Repo → **Settings** → **Pages**.
-3. Under *Build and deployment*, set **Source: Deploy from a branch**, branch
-   `main`, folder `/ (root)`, and save.
-4. Your site goes live at `https://<your-username>.github.io/<repo-name>/`.
-
-(If you prefer, move `index.html` into a `docs/` folder and select `/docs` as the
-Pages folder — handy if you later add a build step.)
 
 ## Data integrity
 
