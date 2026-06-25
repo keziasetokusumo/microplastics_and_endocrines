@@ -55,5 +55,5 @@ cite the primary papers (NCD-RisC, Geyer et al., Levine et al., Travison et al.)
 
 ## License
 
-Code in this repo: MIT (see `LICENSE`). Data: see per-source licensing in
-`SOURCES.md`.
+Code in this repo: MIT (see [`LICENSE`](LICENSE)). Data: see per-source licensing in
+[`SOURCES.md`](SOURCES.md).
